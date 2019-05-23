@@ -48,7 +48,7 @@ include '../../../config/conexionBD.php';
         </h2>
         <nav class="navi">
             <ul id="menu">
-                <li><a href="#"> <img id="imagen" src="../../../public/vista/images/usu.png"> <?php echo $nombresui[0] . ' ' . $apellidosui[0] ?></a>
+            <li><a href="#"> <img id="imagen" src="../../../<?php echo $datos2?>"> <?php echo $nombresui[0] . ' ' . $apellidosui[0] ?></a>
                     <ul>
                         <li><a href="../../../config/cerrarSesion.php"> Cerrar Sesión</a></li>
                     </ul>
