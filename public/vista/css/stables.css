@@ -1,0 +1,36 @@
+#tbl {
+    
+    width: 100%;
+    border: 1px solid;
+    float: right;
+    color: aqua;
+   
+}
+
+#col1{
+    width: 20%;
+}
+
+#col2,#col3{
+    width: 40%;
+}
+
+th, td {
+    vertical-align: center;
+    border: 1px solid;
+    color:rgb(104, 105, 43);
+    
+}
+
+#tf{
+    width: 100%;
+}
+
+input {
+    background-color: rgb(166, 224, 28);
+   } 
+   
+   
+
+  
+  

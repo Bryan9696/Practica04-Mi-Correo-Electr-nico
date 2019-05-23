@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sistema de Gestion de Usuarios</title>
+  <!--  <link href="css/style.css" rel="stylesheet" type="text/css" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+	
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="usuario/css/base.css">
+  <link rel="stylesheet" href="usuario/css/skeleton.css">
+  <link rel="stylesheet" href="usuario/css/layout.css"> 
+  
+  <script type="text/javascript" src="../controladores/funciones.js"> </script>
+</head>
+
+<body >
+        <div class="container">
+		
+                <div class="form-bg">
+   
+    <form id="formulario01" method="POST" enctype="multipart/form-data" action="../controladores/crear_usuario.php">
+        
+        <form>
+                <h2>Insertar Nueva Persona</h2>
+       <p> <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula..." required /></p>
+       <p> <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres..." required /></p>
+        <p> <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos..." required /></p>
+        <p> <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..." required /><p>
+        <p>   <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico..." required /></p>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su fecha de nacimiento..." required /></p>
+        <p> <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico..." required /></p>       
+        <p> <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña..." required /></p>
+        <p> <label for="imagen">Seleccione imagen a cargar</label> </p>
+        <p> <input type="file" name="img" ><br> </p>
+        <button type="submit" id="crear" name="crear" value="" />aceptar</button>
+        <button type="reset" id="cancelar" name="cancelar" value="" />cancelar</button>
+        <a href="login.html"><button type="button" id="login" name="login" value="" />Logearse</button></a>
+    
+    </form>
+                
+    </div> 
+   
+    </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+	<script>window.jQuery || document.write("<script src='usuario/js/jquery-1.5.1.min.js'>\x3C/script>")</script>
+	<script src="usuario/js/app.js"></script>
+    </body>
+
+</html>
