@@ -1,5 +1,6 @@
 <?php
 session_start();
+$codigoui = $_SESSION['cod'];
 $nombresui = explode(" ", $_SESSION['nom']);
 $apellidosui =  explode(" ", $_SESSION['ape']);
 $usurol = $_SESSION['rol'];
@@ -7,6 +8,22 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     header("Location: /SistemaDeGestion/public/vista/login.html");
 }
 ?>
+
+<?php
+include '../../../config/conexionBD.php';
+ $sql = "SELECT usu_foto from usuario WHERE usu_codigo='$codigoui';";
+ $result = $conn->query($sql);
+ if ($result->num_rows > 0) {
+     while ($row = $result->fetch_assoc()) {
+       
+        $datos = $row["usu_foto"];
+        $datos2 = base64_decode($datos);
+    }
+    }
+
+   
+?>
+
 <!DOCTYPE html>
 <html>
 

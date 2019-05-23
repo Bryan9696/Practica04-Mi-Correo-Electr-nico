@@ -1,5 +1,6 @@
 <?php
 session_start();
+$codigoui = $_SESSION['cod'];
 $nombresui = explode(" ", $_SESSION['nom']);
 $apellidosui =  explode(" ", $_SESSION['ape']);
 $usurol = $_SESSION['rol'];
@@ -8,7 +9,20 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
 }
 ?>
 
+<?php
+include '../../../config/conexionBD.php';
+ $sql = "SELECT usu_foto from usuario WHERE usu_codigo='$codigoui';";
+ $result = $conn->query($sql);
+ if ($result->num_rows > 0) {
+     while ($row = $result->fetch_assoc()) {
+       
+        $datos = $row["usu_foto"];
+        $datos2 = base64_decode($datos);
+    }
+    }
 
+   
+?>
 
 <!DOCTYPE html>
 <html>
@@ -33,8 +47,8 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
 
         <nav class="navi">
             <ul id="menu">
-                <li><a href="#"> <img id="imagen" src="../../../public/vista/images/usu.png"> <?php echo $nombresui[0] . ' ' . $apellidosui[0] ?></a>
-                    <ul>
+            <li><a href="#"> <img id="imagen" src="../../../<?php echo $datos2?>"> <?php echo $nombresui[0] . ' ' . $apellidosui[0] ?></a>
+                   <ul>
                         <li><a href="../../../config/cerrarSesion.php"> Cerrar Sesión</a></li>
                     </ul>
                 </li>
@@ -98,7 +112,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     <footer>
     <div>   
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
         <a href="mailto:bpintadoy@est.ups.edu.ec?subject=Questions">Correo de Contacto </a>
         <a>&nbsp;</a>
         <a href="tel:072801706">Telefono </a>
