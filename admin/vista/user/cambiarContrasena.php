@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
-    header("Location: /SistemaDeGestion/public/vista/login.html");
+    header("Location: /PRACTICA04/public/vista/login.html");
 }
 ?>
 
@@ -14,11 +14,11 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     <link href="../../../public/vista/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body background="fondo.jpg">
     <header class="cab">
         <h1>Cambiar Contraseña Usuario</h1>
     </header>
-    <form id="formulario01" method="POST" action="../../controladores/user/cambiarContrasena.php">
+    <form id="formulario01" method="POST" action="../../controladores/cambiarContrasena.php">
         <input type="hidden" id="codigo" name="codigo" value=" <?php echo $_GET["codigo"]; ?>" />
         <label for="contrasenaActual">Contraseña Actual (*)</label>
         <input type="password" id="contrasenaActual" name="contrasenaActual" value="" />

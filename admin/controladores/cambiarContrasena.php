@@ -3,7 +3,7 @@ session_start();
 $codigoui = $_SESSION['cod'];
 $usurol = $_SESSION['rol'];
 if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
-    header("Location: /SistemaDeGestion/public/vista/login.html");
+    header("Location: /PRACTICA04/public/vista/login.html");
 }
 ?>
 
@@ -16,7 +16,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     <link href="../../public/vista/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body background="fondo.jpg">
     <header class="cab">
         <h1>Comprobación de Cambio de Contraseña</h1>
     </header>
@@ -80,7 +80,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     if ($usurol == "admin") {
         echo "<a href='../vista/admin/listado.php'> Regresar </a>";
     } else {
-        echo "<a href='../../vista/user/cuenta.php'> Regresar </a>";
+        echo "<a href='../vista/user/cuenta.php'> Regresar </a>";
     }
     ?>
 </body>

@@ -5,7 +5,7 @@ $nombresui = explode(" ", $_SESSION['nom']);
 $apellidosui =  explode(" ", $_SESSION['ape']);
 $usurol = $_SESSION['rol'];
 if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
-    header("Location: /SistemaDeGestion/public/vista/login.html");
+    header("Location: /PRACTICA04/public/vista/login.html");
 }
 ?>
 
